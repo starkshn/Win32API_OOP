@@ -10,3 +10,9 @@ using std::wstring;
 
 #include <vector>
 using std::vector;
+
+#include <map>
+using std::map;
+
+// image
+#pragma comment(lib, "Msimg32.lib")

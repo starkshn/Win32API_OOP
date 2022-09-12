@@ -1,10 +1,13 @@
 #pragma once
+
+
+
 class Object
 {
 private :
 	Vector2 _pos;
 	Vector2 _scale;
-	Vector2 _dir;
+	Vector2 _dir; // ∫§≈Õ πÊ«‚
 	float _theta;
 
 public:
@@ -24,7 +27,7 @@ public :
 	Vector2 GetPos() { return _pos; }
 	Vector2 GetScale() { return _scale; }
 	float GetTheta() { return _theta; }
-	Vector2 GetVectorDir() { return _dir; }
+	Vector2 GetDir() { return _dir; }
 
 
 };

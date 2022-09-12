@@ -1,25 +1,68 @@
 #include "pch.h"
 #include "StartScene.h"
 #include "Object.h"
+#include "Player.h"
+#include "Monster.h"
+#include "SceneManager.h"
+#include "Core.h"
+#include "Texture.h"
+#include "ResourceManager.h"
 
 StartScene::StartScene()
 {
-
+	p_backGroundTexture = ResourceManager::GetInstance()->LoadTexture(L"BackGroundTexture", L"Textures\\BackGround3.bmp");
 }
 StartScene::~StartScene()
 {
-
+	// Scene 전부 삭제
 }
 
 void StartScene::Enter()
 {
-	Object* go = new Object();
+	// Player
+	Object* player = new Player();
+	player->SetPos(Vector2{640.f, 383.f});
+	player->SetScale(Vector2{100.f, 100.f});
 
-	go->SetPos(Vector2{640.f, 383.f});
-	go->SetScale(Vector2{100.f, 100.f});
+	AddObject(player, OBJECT_TYPE::PLAYER);
 
-	AddObject(go, OBJECT_TYPE::DEFAULT);
+	Monster* monster = nullptr;
+
+	SetMonsterCount(8);
+	float moveDis = 25.f;
+	float monsterScale = 50.f;
+
+	Vector2 resolution = Core::GetInstance()->GetResolution();
+	float term = (resolution._x - (moveDis + monsterScale / 2.f) * 2) / static_cast<float>(GetMonsterCount() - 1);
+
+	for (int i = 0; i < GetMonsterCount(); ++i)
+	{
+		monster = new Monster();
+		monster->SetPos(Vector2( (moveDis + monsterScale / 2.f) + static_cast<float>(i) * term , 50.f));
+		monster->SetLoopDistance(moveDis);
+		monster->SetCenterAnchor(monster->GetPos());
+		monster->SetScale(Vector2(50.f, 50.f));
+		AddObject(monster, OBJECT_TYPE::MONSTER);
+	}
 }
+
+void StartScene::render(HDC dc)
+{
+	Vector2 resolution = Core::GetInstance()->GetResolution();
+
+	BitBlt
+	(
+		dc,
+		0, 0,
+		resolution._x,
+		resolution._y,
+		p_backGroundTexture->GetDC(),
+		0, 0, SRCCOPY
+	);
+
+	Scene::render(dc);
+}
+
 void StartScene::Exit()
 {
 

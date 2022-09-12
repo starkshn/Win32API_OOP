@@ -11,12 +11,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Engine\Scene">
-      <UniqueIdentifier>{b2498ac1-8001-4285-b89a-141f1eba1b92}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Object">
-      <UniqueIdentifier>{04554b40-d0a2-4d69-95a0-11eca9b65916}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Managers">
       <UniqueIdentifier>{bee025bb-6aef-4b7d-8bda-646f946cb58e}</UniqueIdentifier>
     </Filter>
@@ -35,32 +29,50 @@
     <Filter Include="Engine\Header">
       <UniqueIdentifier>{ec3252d8-8c3c-44ac-8d42-f87184a7d9bc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Scene\StartScene">
-      <UniqueIdentifier>{9c7fdcea-6ad9-4dc8-a26e-0c89ea7d06d4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Scene\ToolScene">
-      <UniqueIdentifier>{c72eeb8e-42a7-463d-b378-bcd27b2532a3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\Managers\ColliderManager">
       <UniqueIdentifier>{3bf4b856-a440-456e-918e-60544750712a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Engine\Managers\PathManager">
       <UniqueIdentifier>{8ef908cb-0eb7-4da2-b408-c10c318948ea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Object\Missile">
+    <Filter Include="Engine\Managers\ResourceManager">
+      <UniqueIdentifier>{c354693f-4d7b-4ef8-aa3b-fe1b182bc133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Resources">
+      <UniqueIdentifier>{9773c459-8e47-4d2b-9670-6466fd89d795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Objects">
+      <UniqueIdentifier>{04554b40-d0a2-4d69-95a0-11eca9b65916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Objects\Missile">
       <UniqueIdentifier>{4d994b7c-a800-4e16-b339-8cd28662f339}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Object\Monster">
+    <Filter Include="Engine\Objects\Monster">
       <UniqueIdentifier>{9ae4a49c-23f8-43a8-87be-4b79fcb10fa4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Object\MonsterMissile">
+    <Filter Include="Engine\Objects\MonsterMissile">
       <UniqueIdentifier>{3fd3f43a-0684-4c6c-9724-19694aa9db01}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Object\Player">
+    <Filter Include="Engine\Objects\Player">
       <UniqueIdentifier>{a4d5fdc2-47b5-4cfb-9916-7ac71fe6a60e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Object\ThreeMissile">
+    <Filter Include="Engine\Objects\ThreeMissile">
       <UniqueIdentifier>{20602542-e02f-402a-8bb4-019d9360fcd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scenes">
+      <UniqueIdentifier>{b2498ac1-8001-4285-b89a-141f1eba1b92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scenes\StartScene">
+      <UniqueIdentifier>{9c7fdcea-6ad9-4dc8-a26e-0c89ea7d06d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scenes\ToolScene">
+      <UniqueIdentifier>{c72eeb8e-42a7-463d-b378-bcd27b2532a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Resources\Texture">
+      <UniqueIdentifier>{a34deb70-0f66-45a1-84f7-b90ffff04f68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Resources\Sound">
+      <UniqueIdentifier>{15d98253-eaed-490a-8024-988fc9bc86f8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -93,16 +105,16 @@
       <Filter>Engine\Managers\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>Engine\Object</Filter>
+      <Filter>Engine\Objects</Filter>
     </ClInclude>
     <ClInclude Include="StartScene.h">
-      <Filter>Engine\Scene\StartScene</Filter>
+      <Filter>Engine\Scenes\StartScene</Filter>
     </ClInclude>
     <ClInclude Include="ToolScene.h">
-      <Filter>Engine\Scene\ToolScene</Filter>
+      <Filter>Engine\Scenes\ToolScene</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
-      <Filter>Engine\Scene</Filter>
+      <Filter>Engine\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="struct.h">
       <Filter>Engine\Header</Filter>
@@ -114,19 +126,31 @@
       <Filter>Engine\Managers\PathManager</Filter>
     </ClInclude>
     <ClInclude Include="Missile.h">
-      <Filter>Engine\Object\Missile</Filter>
+      <Filter>Engine\Objects\Missile</Filter>
     </ClInclude>
     <ClInclude Include="Monster.h">
-      <Filter>Engine\Object\Monster</Filter>
+      <Filter>Engine\Objects\Monster</Filter>
     </ClInclude>
     <ClInclude Include="MonsterMissile.h">
-      <Filter>Engine\Object\MonsterMissile</Filter>
+      <Filter>Engine\Objects\MonsterMissile</Filter>
     </ClInclude>
     <ClInclude Include="ThreeMissile.h">
-      <Filter>Engine\Object\ThreeMissile</Filter>
+      <Filter>Engine\Objects\ThreeMissile</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Engine\Object\Player</Filter>
+      <Filter>Engine\Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Engine\Managers\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.h">
+      <Filter>Engine\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine\Resources\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Engine\Resources\Sound</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -157,16 +181,16 @@
       <Filter>Engine\Managers\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
-      <Filter>Engine\Object</Filter>
+      <Filter>Engine\Objects</Filter>
     </ClCompile>
     <ClCompile Include="StartScene.cpp">
-      <Filter>Engine\Scene\StartScene</Filter>
+      <Filter>Engine\Scenes\StartScene</Filter>
     </ClCompile>
     <ClCompile Include="ToolScene.cpp">
-      <Filter>Engine\Scene\ToolScene</Filter>
+      <Filter>Engine\Scenes\ToolScene</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>Engine\Scene</Filter>
+      <Filter>Engine\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="ColiiderManager.cpp">
       <Filter>Engine\Managers\ColliderManager</Filter>
@@ -175,19 +199,31 @@
       <Filter>Engine\Managers\PathManager</Filter>
     </ClCompile>
     <ClCompile Include="Missile.cpp">
-      <Filter>Engine\Object\Missile</Filter>
+      <Filter>Engine\Objects\Missile</Filter>
     </ClCompile>
     <ClCompile Include="Monster.cpp">
-      <Filter>Engine\Object\Monster</Filter>
+      <Filter>Engine\Objects\Monster</Filter>
     </ClCompile>
     <ClCompile Include="MonsterMissile.cpp">
-      <Filter>Engine\Object\MonsterMissile</Filter>
+      <Filter>Engine\Objects\MonsterMissile</Filter>
     </ClCompile>
     <ClCompile Include="ThreeMissile.cpp">
-      <Filter>Engine\Object\ThreeMissile</Filter>
+      <Filter>Engine\Objects\ThreeMissile</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Engine\Object\Player</Filter>
+      <Filter>Engine\Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Engine\Managers\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources.cpp">
+      <Filter>Engine\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine\Resources\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Engine\Resources\Sound</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

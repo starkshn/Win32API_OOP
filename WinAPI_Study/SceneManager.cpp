@@ -19,7 +19,7 @@ SceneManager::~SceneManager()
 
 void SceneManager::init()
 {
-	_scenes[static_cast<UINT>(SCENE_TYPE::START)] = new StartScene();
+	_scenes[static_cast<UINT>(SCENE_TYPE::START)] = new StartScene;
 	_scenes[static_cast<UINT>(SCENE_TYPE::START)]->SetName(L"StartScene");
 
 	_currentScene = _scenes[static_cast<UINT>(SCENE_TYPE::START)];

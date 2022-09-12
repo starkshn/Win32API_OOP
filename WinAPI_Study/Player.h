@@ -1,12 +1,16 @@
 #pragma once
 #include "Object.h"
+
+class Texture;
+
 class Player : public Object
 {
 private:
+	Texture* p_texture;
 
 public :
 	Player();
-	~Player();
+	virtual ~Player() override;
 
 public:
 	virtual void update() final;

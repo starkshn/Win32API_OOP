@@ -1,7 +1,11 @@
 #pragma once
 #include "Object.h"
-class MonsterMissile :
-    public Object
+class MonsterMissile : public Object
 {
+private:
+
+public:
+	
+
 };
 

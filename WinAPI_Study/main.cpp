@@ -4,6 +4,8 @@
 #include "framework.h"
 #include "WinAPI_Study.h"
 #include "Core.h"
+#include "TimeManager.h"
+#include "KeyManager.h"
 
 #define MAX_LOADSTRING 100
 

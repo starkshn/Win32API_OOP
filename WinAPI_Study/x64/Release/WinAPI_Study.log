@@ -1,0 +1,6 @@
+﻿  Object.cpp
+C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,28): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,35): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(29,30): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+Player.obj : error LNK2001: 확인할 수 없는 외부 기호 __imp_TransparentBlt
+C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\Output\bin\RGame.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
