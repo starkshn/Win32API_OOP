@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Default">
+      <UniqueIdentifier>{5eddc207-33d4-4b35-b8dd-04fe5f9be012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{ad2f4ce2-4364-4bcc-b0b5-e9da28be777a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Default\리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{b2498ac1-8001-4285-b89a-141f1eba1b92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object">
+      <UniqueIdentifier>{04554b40-d0a2-4d69-95a0-11eca9b65916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Managers">
+      <UniqueIdentifier>{bee025bb-6aef-4b7d-8bda-646f946cb58e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Managers\KeyManager">
+      <UniqueIdentifier>{26a75dda-b82c-41a2-96b5-fac8aed11fda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Managers\TimeManager">
+      <UniqueIdentifier>{e5a55545-0c0a-4e77-ab1b-9c1553c88eaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Managers\SceneManager">
+      <UniqueIdentifier>{43234d03-1d1f-4418-8888-e523eb5ebb2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Core">
+      <UniqueIdentifier>{1ba5e076-d11d-427d-b5b1-885b42215dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Header">
+      <UniqueIdentifier>{ec3252d8-8c3c-44ac-8d42-f87184a7d9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\StartScene">
+      <UniqueIdentifier>{9c7fdcea-6ad9-4dc8-a26e-0c89ea7d06d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\ToolScene">
+      <UniqueIdentifier>{c72eeb8e-42a7-463d-b378-bcd27b2532a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Managers\ColliderManager">
+      <UniqueIdentifier>{3bf4b856-a440-456e-918e-60544750712a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Managers\PathManager">
+      <UniqueIdentifier>{8ef908cb-0eb7-4da2-b408-c10c318948ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\Missile">
+      <UniqueIdentifier>{4d994b7c-a800-4e16-b339-8cd28662f339}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\Monster">
+      <UniqueIdentifier>{9ae4a49c-23f8-43a8-87be-4b79fcb10fa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\MonsterMissile">
+      <UniqueIdentifier>{3fd3f43a-0684-4c6c-9724-19694aa9db01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\Player">
+      <UniqueIdentifier>{a4d5fdc2-47b5-4cfb-9916-7ac71fe6a60e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Object\ThreeMissile">
+      <UniqueIdentifier>{20602542-e02f-402a-8bb4-019d9360fcd6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="WinAPI_Study.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="define.h">
+      <Filter>Engine\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Engine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>Engine\Managers\KeyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Engine\Managers\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Engine\Managers\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Engine\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.h">
+      <Filter>Engine\Scene\StartScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolScene.h">
+      <Filter>Engine\Scene\ToolScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>Engine\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="ColiiderManager.h">
+      <Filter>Engine\Managers\ColliderManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PathManager.h">
+      <Filter>Engine\Managers\PathManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Missile.h">
+      <Filter>Engine\Object\Missile</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Engine\Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterMissile.h">
+      <Filter>Engine\Object\MonsterMissile</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreeMissile.h">
+      <Filter>Engine\Object\ThreeMissile</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Engine\Object\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WinAPI_Study.rc">
+      <Filter>Default\리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Default\리소스 파일</Filter>
+    </Image>
+    <Image Include="WinAPI_Study.ico">
+      <Filter>Default\리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Core.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>Engine\Managers\KeyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Engine\Managers\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Engine\Managers\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Engine\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>Engine\Scene\StartScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolScene.cpp">
+      <Filter>Engine\Scene\ToolScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Engine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ColiiderManager.cpp">
+      <Filter>Engine\Managers\ColliderManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PathManager.cpp">
+      <Filter>Engine\Managers\PathManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Missile.cpp">
+      <Filter>Engine\Object\Missile</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Engine\Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterMissile.cpp">
+      <Filter>Engine\Object\MonsterMissile</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeMissile.cpp">
+      <Filter>Engine\Object\ThreeMissile</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Engine\Object\Player</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
