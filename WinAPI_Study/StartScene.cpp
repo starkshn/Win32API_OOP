@@ -17,6 +17,8 @@ StartScene::~StartScene()
 	// Scene 전부 삭제
 }
 
+
+
 void StartScene::Enter()
 {
 	// Player
@@ -26,6 +28,7 @@ void StartScene::Enter()
 
 	AddObject(player, OBJECT_TYPE::PLAYER);
 
+	// monster
 	Monster* monster = nullptr;
 
 	SetMonsterCount(8);
@@ -39,11 +42,17 @@ void StartScene::Enter()
 	{
 		monster = new Monster();
 		monster->SetPos(Vector2( (moveDis + monsterScale / 2.f) + static_cast<float>(i) * term , 50.f));
+		monster->SetScale(Vector2(50.f, 50.f));
 		monster->SetLoopDistance(moveDis);
 		monster->SetCenterAnchor(monster->GetPos());
-		monster->SetScale(Vector2(50.f, 50.f));
 		AddObject(monster, OBJECT_TYPE::MONSTER);
 	}
+}
+
+void StartScene::update()
+{
+	Scene::update();
+
 }
 
 void StartScene::render(HDC dc)
@@ -61,6 +70,7 @@ void StartScene::render(HDC dc)
 	);
 
 	Scene::render(dc);
+
 }
 
 void StartScene::Exit()

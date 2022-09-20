@@ -74,19 +74,24 @@ void Player::render(HDC dc)
 
 void Player::CreateMissile()
 {
+	// missile 생성
+	Missile* missile = new Missile();
+
+	// 미사일 위치 설정
 	Vector2 playerPos = GetPos();
 	playerPos._y -= GetScale()._y / 2.f;
-
-	Missile* missile = new Missile();
 	missile->SetPos(playerPos);
 
+	playerPos._y -= (GetScale()._y / 2.f) + (missile->GetScale()._y / 2.f);
+	missile->SetPos(playerPos);
+
+	// 미사일 크기 설정
 	missile->SetScale(Vector2(25.f, 25.f));
 
 	// 미사일 방향
 	missile->SetDir(Vector2(0.f, 1.f));
 
-	playerPos._y -= (GetScale()._y / 2.f) + (missile->GetScale()._y / 2.f);
-	missile->SetPos(playerPos);
+	SetObjectName(L"missile");
 
 	Scene* curScene = SceneManager::GetInstance()->GetCurrentScene();
 	curScene->AddObject(missile, OBJECT_TYPE::MISSILE);

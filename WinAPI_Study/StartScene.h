@@ -6,8 +6,8 @@ class Texture;
 class StartScene : public Scene
 {
 private:
-	UINT _monsterCount;
-	Texture* p_backGroundTexture;
+	UINT		_monsterCount;
+	Texture*	p_backGroundTexture;
 	
 public:
 	StartScene();
@@ -16,11 +16,13 @@ public:
 private:
 	virtual void Enter() override;
 	virtual void Exit() override;
+	virtual void update() override;
 	virtual void render(HDC dc) override;
 
 public:
 	void SetMonsterCount(UINT monsterCount) { _monsterCount = monsterCount; }
 
+public:
 	int GetMonsterCount() { return _monsterCount; }
 	
 };

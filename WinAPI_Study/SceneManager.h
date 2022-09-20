@@ -7,8 +7,8 @@ class SceneManager
 	SINGLE(SceneManager);
 
 private:
-	Scene* _scenes[static_cast<UINT>(SCENE_TYPE::END)];
-	Scene* _currentScene;
+	Scene* p_scenes[static_cast<UINT>(SCENE_TYPE::END)];
+	Scene* p_currentScene;
 
 public :
 	void init();
@@ -16,6 +16,6 @@ public :
 	void render(HDC sceneDC);
 
 public:
-	Scene* GetCurrentScene() { return _currentScene; }
+	Scene* GetCurrentScene() { return p_currentScene; }
 };
 

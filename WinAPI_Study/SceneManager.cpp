@@ -2,7 +2,7 @@
 #include "SceneManager.h"
 #include "StartScene.h"
 
-SceneManager::SceneManager() : _scenes(), _currentScene(nullptr)
+SceneManager::SceneManager() : p_scenes(), p_currentScene(nullptr)
 {
 
 }
@@ -10,26 +10,28 @@ SceneManager::~SceneManager()
 {
 	for (unsigned int i = 0; i < static_cast<unsigned int>(SCENE_TYPE::END); ++i)
 	{
-		if (_scenes[i] != nullptr)
+		if (p_scenes[i] != nullptr)
 		{
-			delete _scenes[i];
+			delete p_scenes[i];
 		}
 	}
 }
 
 void SceneManager::init()
 {
-	_scenes[static_cast<UINT>(SCENE_TYPE::START)] = new StartScene;
-	_scenes[static_cast<UINT>(SCENE_TYPE::START)]->SetName(L"StartScene");
+	p_scenes[static_cast<UINT>(SCENE_TYPE::START)] = new StartScene;
+	p_scenes[static_cast<UINT>(SCENE_TYPE::START)]->SetName(L"StartScene");
 
-	_currentScene = _scenes[static_cast<UINT>(SCENE_TYPE::START)];
-	_currentScene->Enter();
+	p_currentScene = p_scenes[static_cast<UINT>(SCENE_TYPE::START)];
+	p_currentScene->Enter();
 }
+
 void SceneManager::update()
 {
-	_currentScene->update();
+	p_currentScene->update();
 }
+
 void SceneManager::render(HDC sceneDC)
 {
-	_currentScene->render(sceneDC);
+	p_currentScene->render(sceneDC);
 }

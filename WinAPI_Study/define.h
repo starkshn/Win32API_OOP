@@ -15,6 +15,8 @@
 
 #define PI 3.1415926535f
 
+#define CLONE(type) type* Clone() { return new type(*this); }
+
 enum class OBJECT_TYPE
 {
 	DEFAULT,

@@ -7,18 +7,21 @@ class Texture;
 class Monster : public Object
 {
 private:
-	float _speed;
-	float _loopDistance;
-	int _direction;
-	bool _missileFire;
-	UINT _monsterId;
-	Vector2 _centerAnchor;
-	Texture* p_texture = nullptr;
+	CLONE(Monster);
+
+	float			_speed;
+	float			_loopDistance;
+	int				_direction;
+	bool			_missileFire;
+	UINT			_monsterId;
+
+	Vector2			_centerAnchor;
+	Texture*		p_texture = nullptr;
 	MonsterMissile* p_missile = nullptr;
 	
 public:
 	Monster();
-	~Monster();
+	virtual ~Monster() override;
 
 public:
 	virtual void update() override;
@@ -34,6 +37,7 @@ public:
 	void SetMonsterId(UINT id) { _monsterId = id; }
 	void SetMissileFire(bool fire) { _missileFire = fire; }
 
+public:
 	float GetSpeed() { return _speed; }
 	Vector2 GetCenterAnchor() { return _centerAnchor; }
 	float GetLoopDistance() { return _loopDistance; }

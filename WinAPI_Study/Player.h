@@ -6,6 +6,8 @@ class Texture;
 class Player : public Object
 {
 private:
+	CLONE(Player);
+
 	Texture* p_texture;
 
 public :
@@ -13,14 +15,12 @@ public :
 	virtual ~Player() override;
 
 public:
-	virtual void update() final;
-	virtual void render(HDC dc) final;
+	virtual void update() override;
+	virtual void render(HDC dc) override;
 
 public:
 	void CreateMissile();
 	void CreateThreeMissile();
-
-public:
 
 };
 
