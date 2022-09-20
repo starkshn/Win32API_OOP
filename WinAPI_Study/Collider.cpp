@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Collider.h"
+#include "Core.h"
 #include "Object.h"
 #include "SelectGDI.h"
 

@@ -1,7 +1,7 @@
 #pragma once
 class PathManager
 {
-SINGLE(PathManager);
+	SINGLE(PathManager)
 
 private:
 	wchar_t _contentsPath[255];

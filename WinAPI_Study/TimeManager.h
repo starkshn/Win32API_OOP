@@ -1,7 +1,7 @@
 #pragma once
 class TimeManager
 {
-	SINGLE(TimeManager);
+	SINGLE(TimeManager)
 
 private :
 	LARGE_INTEGER _curCount;

@@ -4,6 +4,7 @@
 #include "KeyManager.h"
 #include "SceneManager.h"
 #include "PathManager.h"
+#include "ColliderManager.h"
 
 Core::Core()
 	: 
@@ -74,7 +75,8 @@ void Core::progress()
 	// ===============
 	// collider update
 	// ===============
-
+	ColliderManager::GetInstance()->update();
+	
 	// =============
 	// rendering...
 	// =============

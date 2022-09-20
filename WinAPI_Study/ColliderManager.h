@@ -15,7 +15,7 @@ union COLLIDER_ID
 
 class ColliderManager
 {
-	SINGLE(ColliderManager);
+	SINGLE(ColliderManager)
 
 private:
 	map<ULONGLONG, bool> _mapCollisionInfo;
@@ -27,13 +27,11 @@ private:
 
 public:
 	void update();
-	void CheckObjectType();
+	void CheckObjectType(OBJECT_TYPE left, OBJECT_TYPE right);
 	void ResetObjects()
 	{
 		memset(_arrCheckCollision, 0, sizeof(UINT) * static_cast<UINT>(OBJECT_TYPE::END));
 	}
-
-
 
 };
 

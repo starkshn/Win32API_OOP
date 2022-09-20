@@ -13,6 +13,22 @@ Object::Object()
 {
 
 }
+
+Object::Object(const Object& origin)
+	:
+	_objectName(origin._objectName),
+	_pos(origin._pos),
+	_scale(origin._scale),
+	p_collider(nullptr),
+	_alive(true)
+{
+	if (origin.p_collider)
+	{
+		p_collider = new Collider(*origin.p_collider);
+		p_collider->p_owner = this;
+	}
+}
+
 Object::~Object()
 {
 	
@@ -43,9 +59,11 @@ void Object::render(HDC dc)
 		static_cast<int>(_pos._x + _scale._x / 2.f),
 		static_cast<int>(_pos._y + _scale._x / 2.f)
 	);
+
+	ComponentRender(dc);
 }
 
-Collider* Object::CreateCollider()
+void Object::CreateCollider()
 {
 	p_collider = new Collider;
 	p_collider->p_owner = this;

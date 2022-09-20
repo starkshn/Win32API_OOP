@@ -4,7 +4,7 @@ class Scene;
 
 class SceneManager
 {
-	SINGLE(SceneManager);
+	SINGLE(SceneManager)
 
 private:
 	Scene* p_scenes[static_cast<UINT>(SCENE_TYPE::END)];

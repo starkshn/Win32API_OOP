@@ -12,7 +12,7 @@ private:
 
 public:
 	Missile();
-	~Missile();
+	virtual ~Missile() override;
 
 public:
 	virtual void update() final;

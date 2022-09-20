@@ -2,7 +2,10 @@
 #include "SceneManager.h"
 #include "StartScene.h"
 
-SceneManager::SceneManager() : p_scenes(), p_currentScene(nullptr)
+SceneManager::SceneManager() 
+	: 
+	p_scenes(), 
+	p_currentScene(nullptr)
 {
 
 }

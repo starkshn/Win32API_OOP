@@ -4,11 +4,6 @@
 #include "Texture.h"
 #include <algorithm>
 
-
-ResourceManager::ResourceManager()
-{
-
-}
 ResourceManager::~ResourceManager()
 {
 	for_each

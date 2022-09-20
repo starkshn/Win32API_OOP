@@ -43,6 +43,10 @@ public:
 public:
 	void CreateCollider();
 
+public:
+	void SetDead() { _alive = false; };
+	bool IsDead() { return !_alive; }
+
 public :
 	void SetPos(Vector2 pos) { _pos = pos;  }
 	void SetScale(Vector2 scale) { _scale = scale;  }

@@ -11,12 +11,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Engine\01_Core">
-      <UniqueIdentifier>{1ba5e076-d11d-427d-b5b1-885b42215dee}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\02_Header">
-      <UniqueIdentifier>{ec3252d8-8c3c-44ac-8d42-f87184a7d9bc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine\03_Managers">
       <UniqueIdentifier>{bee025bb-6aef-4b7d-8bda-646f946cb58e}</UniqueIdentifier>
     </Filter>
@@ -92,6 +86,12 @@
     <Filter Include="Engine\08_Util\Func">
       <UniqueIdentifier>{1886d0be-22cb-4613-91ad-8292d81d0bc6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\01_Header">
+      <UniqueIdentifier>{ec3252d8-8c3c-44ac-8d42-f87184a7d9bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\02_Core">
+      <UniqueIdentifier>{1ba5e076-d11d-427d-b5b1-885b42215dee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -108,10 +108,10 @@
     </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="define.h">
-      <Filter>Engine\02_Header</Filter>
+      <Filter>Engine\01_Header</Filter>
     </ClInclude>
     <ClInclude Include="Core.h">
-      <Filter>Engine\01_Core</Filter>
+      <Filter>Engine\02_Core</Filter>
     </ClInclude>
     <ClInclude Include="KeyManager.h">
       <Filter>Engine\03_Managers\KeyManager</Filter>
@@ -135,7 +135,7 @@
       <Filter>Engine\05_Scenes</Filter>
     </ClInclude>
     <ClInclude Include="struct.h">
-      <Filter>Engine\02_Header</Filter>
+      <Filter>Engine\01_Header</Filter>
     </ClInclude>
     <ClInclude Include="ColliderManager.h">
       <Filter>Engine\03_Managers\ColliderManager</Filter>
@@ -193,7 +193,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Core.cpp">
-      <Filter>Engine\01_Core</Filter>
+      <Filter>Engine\02_Core</Filter>
     </ClCompile>
     <ClCompile Include="KeyManager.cpp">
       <Filter>Engine\03_Managers\KeyManager</Filter>

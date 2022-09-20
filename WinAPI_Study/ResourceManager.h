@@ -4,7 +4,7 @@ class Texture;
 
 class ResourceManager
 {
-SINGLE(ResourceManager);
+	SINGLE(ResourceManager)
 
 private:
 	map<wstring, Texture*> _mapTexture;

@@ -53,7 +53,7 @@ struct KeyInfo
 
 class KeyManager
 {
-	SINGLE(KeyManager);
+	SINGLE(KeyManager)
 
 private :
 	vector<KeyInfo> _keys;

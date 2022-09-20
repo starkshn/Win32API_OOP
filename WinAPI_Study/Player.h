@@ -8,7 +8,7 @@ class Player : public Object
 private:
 	CLONE(Player);
 
-	Texture* p_texture;
+	Texture* p_texture = nullptr;
 
 public :
 	Player();

@@ -13,6 +13,7 @@ using std::vector;
 
 #include <map>
 using std::map;
+using std::make_pair;
 
 // image
 #pragma comment(lib, "Msimg32.lib")
