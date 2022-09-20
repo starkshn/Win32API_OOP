@@ -27,6 +27,6 @@ public :
 	POINT	GetResolution() { return _resolution; }
 	HDC		GetMainDC() { return h_dc; }
 	HBRUSH	GetHBRUSH(HBRUSH_TYPE type) { return h_brushes[static_cast<UINT>(type)]; }
-	HPEN	GetHBRUSH(HPEN_TYPE type) { return h_pens[static_cast<UINT>(type)]; }
+	HPEN	GetHPEN(HPEN_TYPE type) { return h_pens[static_cast<UINT>(type)]; }
 
 };

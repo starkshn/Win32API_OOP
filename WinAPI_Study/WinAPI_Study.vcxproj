@@ -149,7 +149,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ColiiderManager.h" />
+    <ClInclude Include="ColliderManager.h" />
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="define.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SelectGDI.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="StartScene.h" />
     <ClInclude Include="struct.h" />
@@ -177,7 +179,8 @@
     <ClInclude Include="WinAPI_Study.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ColiiderManager.cpp" />
+    <ClCompile Include="ColliderManager.cpp" />
+    <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Core.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="Missile.cpp" />
@@ -190,6 +193,7 @@
     <ClCompile Include="Resources.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SelectGDI.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="StartScene.cpp" />
     <ClCompile Include="Texture.cpp" />

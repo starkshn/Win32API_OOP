@@ -43,6 +43,5 @@ void Missile::render(HDC dc)
 		p_texture->GetDC(),
 		0, 0, width, height,
 		RGB(255, 0, 255)
-
 	);
 }

@@ -46,22 +46,43 @@ public :
 		_x = static_cast<float>(other.x);
 		_y = static_cast<float>(other.y);
 	}
-	Vector2 operator + (const POINT& other)
+
+	Vector2 operator + (const Vector2& other)
 	{
-		return Vector2(_x + other.x, _y + other.y);
+		return Vector2(_x + other._x, _y + other._y);
 	}
+
+	void operator += (const Vector2 other)
+	{
+		_x += other._x;
+		_y += other._y;
+	}
+
 	Vector2 operator - (POINT& other)
 	{
 		return Vector2(_x - other.x, _y - other.y);
 	}
+
 	Vector2 operator * (POINT& other)
 	{
 		return Vector2(_x * other.x, _y * other.y);
 	}
+	Vector2 operator * (int value)
+	{
+		return Vector2(_x * static_cast<float>(value), _y * static_cast<float>(value));
+	}
+
 	Vector2 operator / (POINT& other)
 	{
 		assert(!(0.f == other.x || 0.f == other.y));
 		return Vector2(_x / other.x, _y / other.y);
 	}
+	Vector2 operator / (const float& value)
+	{
+		assert(!(0.f == value));
+		return Vector2(_x / value, _y / value);
+	}
+
+
 
 };

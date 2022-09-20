@@ -2,18 +2,36 @@
 #include "Object.h"
 #include "KeyManager.h"
 #include "TimeManager.h"
+#include "Collider.h"
 
 Object::Object() 
 	: 
 	_pos{}, 
 	_scale{},
-	_theta(0)
+	_theta(0),
+	p_collider(nullptr)
 {
 
 }
 Object::~Object()
 {
 	
+}
+
+void Object::finalUpdate()
+{
+	if (p_collider != nullptr)
+	{
+		p_collider->finalUpdate();
+	}
+}
+
+void Object::ComponentRender(HDC dc)
+{
+	if (p_collider != nullptr)
+	{
+		p_collider->render(dc);
+	}
 }
 
 void Object::render(HDC dc)
@@ -26,3 +44,13 @@ void Object::render(HDC dc)
 		static_cast<int>(_pos._y + _scale._x / 2.f)
 	);
 }
+
+Collider* Object::CreateCollider()
+{
+	p_collider = new Collider;
+	p_collider->p_owner = this;
+}
+
+
+
+

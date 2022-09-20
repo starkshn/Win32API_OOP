@@ -24,6 +24,8 @@ public:
 	{
 		_objects[static_cast<UINT>(type)].push_back(go);
 	}
+	void DeleteSceneObjects(OBJECT_TYPE objectType);
+	void DeleteSceneAllObjects();
 
 public:
 	void SetName(wstring sceneName) { _sceneName = sceneName; }
@@ -34,5 +36,7 @@ public:
 	{
 		return _objects[static_cast<UINT>(type)];
 	}
+
+
 };
 
