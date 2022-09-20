@@ -9,9 +9,10 @@ Monster::Monster()
 	:
 	p_texture(nullptr),
 	_speed(100.f),
-	_loopDistance(),
-	_centerAnchor(),
-	_direction(1)
+	_loopDistance(50.f),
+	_direction(1),
+	_missileFire(false),
+	_centerAnchor{0.f, 0.f}
 {
 	p_texture = ResourceManager::GetInstance()->LoadTexture(L"MonsterTexture", L"Textures\\monsterPlane.bmp");
 }
@@ -41,7 +42,7 @@ void Monster::update()
 void Monster::render(HDC dc)
 {
 	int width = static_cast<int>(p_texture->GetWidth());
-	int height = static_cast<int>(p_texture->GetWidth());
+	int height = static_cast<int>(p_texture->GetHeight());
 
 	Vector2 pos = GetPos();
 

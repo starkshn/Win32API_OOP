@@ -60,18 +60,40 @@ int Core::init(HWND hWnd, POINT resolution)
 
 void Core::progress()
 {
+	// ===============
 	// Managers update
+	// ===============
 	TimeManager::GetInstance()->update();
 	KeyManager::GetInstance()->update();
+
+	// ===============
+	// Scene update
+	// ===============
 	SceneManager::GetInstance()->update();
 
+	// ===============
+	// collider update
+	// ===============
+
+	// =============
 	// rendering...
-	// window clear
+	// =============
 	Rectangle(h_memDC, -1, -1, _resolution.x + 1, _resolution.y + 1);
 	
 	SceneManager::GetInstance()->render(h_memDC);
 
-	BitBlt(h_dc, 0, 0, _resolution.x, _resolution.y, h_memDC, 0, 0, SRCCOPY);
+	BitBlt
+	(
+		h_dc,
+		0, 0, 
+		_resolution.x, _resolution.y,
+		h_memDC, 
+		0, 0, SRCCOPY
+	);
+
+	// ===============
+	// Event 지연처리
+	// ===============
 }
 
 void Core::CreateHBRUSH()

@@ -29,8 +29,6 @@ void StartScene::Enter()
 	AddObject(player, OBJECT_TYPE::PLAYER);
 
 	// monster
-	Monster* monster = nullptr;
-
 	SetMonsterCount(8);
 	float moveDis = 25.f;
 	float monsterScale = 50.f;
@@ -38,28 +36,31 @@ void StartScene::Enter()
 	Vector2 resolution = Core::GetInstance()->GetResolution();
 	float term = (resolution._x - (moveDis + monsterScale / 2.f) * 2) / static_cast<float>(GetMonsterCount() - 1);
 
+	Monster* monster = nullptr;
+
 	for (int i = 0; i < GetMonsterCount(); ++i)
 	{
 		monster = new Monster();
 		monster->SetPos(Vector2( (moveDis + monsterScale / 2.f) + static_cast<float>(i) * term , 50.f));
-		monster->SetScale(Vector2(50.f, 50.f));
+		monster->SetScale(Vector2(41.f, 41.f));
 		monster->SetLoopDistance(moveDis);
 		monster->SetCenterAnchor(monster->GetPos());
 		AddObject(monster, OBJECT_TYPE::MONSTER);
 	}
+
 }
 
 void StartScene::update()
 {
 	Scene::update();
-
 }
 
 void StartScene::render(HDC dc)
 {
 	Vector2 resolution = Core::GetInstance()->GetResolution();
 
-	BitBlt
+	// background rendering
+	/*BitBlt
 	(
 		dc,
 		0, 0,
@@ -67,7 +68,7 @@ void StartScene::render(HDC dc)
 		resolution._y,
 		p_backGroundTexture->GetDC(),
 		0, 0, SRCCOPY
-	);
+	);*/
 
 	Scene::render(dc);
 

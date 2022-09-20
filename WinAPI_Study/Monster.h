@@ -13,7 +13,7 @@ private:
 	float			_loopDistance;
 	int				_direction;
 	bool			_missileFire;
-	UINT			_monsterId;
+	UINT			_monsterId = 0;
 
 	Vector2			_centerAnchor;
 	Texture*		p_texture = nullptr;
@@ -38,10 +38,10 @@ public:
 	void SetMissileFire(bool fire) { _missileFire = fire; }
 
 public:
-	float GetSpeed() { return _speed; }
+	float	GetSpeed() { return _speed; }
 	Vector2 GetCenterAnchor() { return _centerAnchor; }
-	float GetLoopDistance() { return _loopDistance; }
-	int GetMonsterId() { return _monsterId; }
-	bool GetMissileFire() { return _missileFire; }
+	float	GetLoopDistance() { return _loopDistance; }
+	int		GetMonsterId() { return _monsterId; }
+	bool	GetMissileFire() { return _missileFire; }
 };
 

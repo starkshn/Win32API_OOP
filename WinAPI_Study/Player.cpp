@@ -74,14 +74,12 @@ void Player::render(HDC dc)
 
 void Player::CreateMissile()
 {
+	Vector2 playerPos = GetPos();
+
 	// missile 생성
 	Missile* missile = new Missile();
 
 	// 미사일 위치 설정
-	Vector2 playerPos = GetPos();
-	playerPos._y -= GetScale()._y / 2.f;
-	missile->SetPos(playerPos);
-
 	playerPos._y -= (GetScale()._y / 2.f) + (missile->GetScale()._y / 2.f);
 	missile->SetPos(playerPos);
 
