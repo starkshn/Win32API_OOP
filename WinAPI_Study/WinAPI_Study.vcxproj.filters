@@ -92,6 +92,9 @@
     <Filter Include="Engine\02_Core">
       <UniqueIdentifier>{1ba5e076-d11d-427d-b5b1-885b42215dee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\03_Managers\EventManager">
+      <UniqueIdentifier>{8ba4efc3-81a9-492f-b82c-05d626332aea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -176,6 +179,12 @@
     <ClInclude Include="SelectGDI.h">
       <Filter>Engine\08_Util\GDI</Filter>
     </ClInclude>
+    <ClInclude Include="Func.h">
+      <Filter>Engine\08_Util\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Engine\03_Managers\EventManager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Study.rc">
@@ -254,6 +263,12 @@
     </ClCompile>
     <ClCompile Include="SelectGDI.cpp">
       <Filter>Engine\08_Util\GDI</Filter>
+    </ClCompile>
+    <ClCompile Include="Func.cpp">
+      <Filter>Engine\08_Util\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Engine\03_Managers\EventManager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

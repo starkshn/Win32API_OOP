@@ -16,7 +16,7 @@ Player::Player() : p_texture(nullptr)
 	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
 	GetCollider()->SetColliderSacle(Vector2(40.f, 40.f));
 
-	p_texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerTexture", L"Textures\\Plane2.bmp");
+	p_texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerTexture", L"Textures\\MS_Player.bmp");
 }
 
 Player::~Player()
@@ -73,7 +73,7 @@ void Player::render(HDC dc)
 		width, height,
 		p_texture->GetDC(),
 		0, 0, width, height,
-		RGB(255, 0, 255)
+		RGB(0, 255, 0)
 	);
 
 	Object::ComponentRender(dc);

@@ -15,6 +15,10 @@ Monster::Monster()
 	_missileFire(false),
 	_centerAnchor{0.f, 0.f}
 {
+	CreateCollider();
+	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
+	GetCollider()->SetColliderSacle(Vector2(30.f, 30.f));
+
 	p_texture = ResourceManager::GetInstance()->LoadTexture(L"MonsterTexture", L"Textures\\monsterPlane.bmp");
 }
 
@@ -57,6 +61,8 @@ void Monster::render(HDC dc)
 		0, 0, width, height,
 		RGB(255, 0, 255)
 	);
+
+	Object::ComponentRender(dc);
 
 }
 

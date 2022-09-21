@@ -67,16 +67,20 @@ void Collider::render(HDC dc)
 void Collider::OnCollisionEnter(Collider* other)
 {
 	p_owner->OnCollisionEnter(other);
+
 	++_collisionCount;
 }
 
 void Collider::OnCollisionStay(Collider* other)
 {
 	p_owner->OnCollisionStay(other);
+
 }
+
 
 void Collider::OnCollisionExit(Collider* other)
 {
 	p_owner->OnCollisionExit(other);
+
 	--_collisionCount;
 }

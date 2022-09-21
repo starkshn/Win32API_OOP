@@ -109,8 +109,6 @@ void ColliderManager::CollisionObjectUpdate(OBJECT_TYPE left, OBJECT_TYPE right)
 			}
 
 		}
-
-
 	}
 }
 
@@ -122,7 +120,7 @@ bool ColliderManager::IsCollision(Collider* leftCollider, Collider* rightCollide
 	Vector2 rightPos = rightCollider->GetFinalPos();
 	Vector2 rightScale = rightCollider->GetColliderScale();
 
-	if (abs(rightPos._x - leftPos._x) < (rightPos._x + leftPos._x) / 2.f && abs(rightPos._y - leftPos._y) < (rightPos._y + leftPos._y) / 2.f)
+	if ( abs(rightPos._x - leftPos._x) < (rightScale._x + leftScale._x) / 2.f && abs(rightPos._y - leftPos._y) < (rightScale._y + leftScale._y) / 2.f)
 	{
 		return true;
 	}
@@ -139,7 +137,7 @@ void ColliderManager::CheckObjectType(OBJECT_TYPE left, OBJECT_TYPE right)
 
 	if (col < row)
 	{
-		UINT temp = static_cast<UINT>(col);
+		UINT temp = static_cast<UINT>(row);
 		row = static_cast<UINT>(col);
 		col = temp;
 	}

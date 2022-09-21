@@ -152,6 +152,8 @@
     <ClInclude Include="ColliderManager.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Core.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Func.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="framework.h" />
@@ -182,6 +184,8 @@
     <ClCompile Include="ColliderManager.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Core.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="Func.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="Missile.cpp" />
     <ClCompile Include="Monster.cpp" />

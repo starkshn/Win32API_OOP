@@ -55,3 +55,12 @@ enum class HPEN_TYPE
 	END,
 };
 
+enum class EVENT_TYPE
+{
+	CREATE_OBJECT,
+	DELETE_OBJECT,
+	SCENE_CHANGE,
+
+	END,
+};
+

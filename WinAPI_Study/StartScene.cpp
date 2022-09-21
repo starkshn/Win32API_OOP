@@ -7,6 +7,7 @@
 #include "Core.h"
 #include "Texture.h"
 #include "ResourceManager.h"
+#include "ColliderManager.h"
 
 StartScene::StartScene()
 {
@@ -48,6 +49,7 @@ void StartScene::Enter()
 		AddObject(monster, OBJECT_TYPE::MONSTER);
 	}
 
+	ColliderManager::GetInstance()->CheckObjectType(OBJECT_TYPE::PLAYER, OBJECT_TYPE::MONSTER);
 }
 
 void StartScene::update()

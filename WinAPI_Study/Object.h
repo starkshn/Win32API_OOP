@@ -33,9 +33,18 @@ public:
 
 	virtual Object* Clone() abstract;
 
-	virtual void OnCollisionEnter(Collider* other) {}
-	virtual void OnCollisionStay(Collider* other) {}
-	virtual void OnCollisionExit(Collider* other) {}
+	virtual void OnCollisionEnter(Collider* other) 
+	{
+
+	}
+	virtual void OnCollisionStay(Collider* other) 
+	{
+
+	}
+	virtual void OnCollisionExit(Collider* other) 
+	{
+
+	}
 
 public:
 	void ComponentRender(HDC dc);
