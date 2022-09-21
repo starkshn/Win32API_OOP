@@ -9,7 +9,8 @@ Object::Object()
 	_pos{}, 
 	_scale{},
 	_theta(0),
-	p_collider(nullptr)
+	p_collider(nullptr),
+	_alive(true)
 {
 
 }
