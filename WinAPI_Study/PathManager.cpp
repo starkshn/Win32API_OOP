@@ -6,6 +6,11 @@ PathManager::PathManager() : _contentsPath()
 
 }
 
+PathManager::~PathManager()
+{
+
+}
+
 void PathManager::init()
 {
 	GetCurrentDirectory(255, _contentsPath);

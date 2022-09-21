@@ -5,6 +5,17 @@
 #include "SceneManager.h"
 #include "Scene.h"
 
+ColliderManager::ColliderManager()
+{
+
+}
+
+ColliderManager::~ColliderManager()
+{
+
+}
+
+
 void ColliderManager::update()
 {
 	for (UINT row = 0; row < static_cast<UINT>(OBJECT_TYPE::END); ++row)

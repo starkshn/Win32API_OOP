@@ -1,27 +1,5 @@
-﻿  PathManager.cpp
+﻿  SceneManager.cpp
 C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,28): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,35): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(29,30): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  ResourceManager.cpp
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,28): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,35): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(29,30): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\ResourceManager.h(21,1): warning C4150: 불완전한 형식 'Texture'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\ResourceManager.h(3): message : 'Texture' 선언을 참조하십시오.
-  SceneManager.cpp
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,28): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(19,35): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\WinAPI_Study\struct.h(29,30): warning C4244: 'return': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-Core.obj : error LNK2019: "private: __cdecl KeyManager::KeyManager(void)" (??0KeyManager@@AEAA@XZ)"public: static class KeyManager * __cdecl KeyManager::GetInstance(void)" (?GetInstance@KeyManager@@SAPEAV1@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-Player.obj : error LNK2001: 확인할 수 없는 외부 기호 "private: __cdecl KeyManager::KeyManager(void)" (??0KeyManager@@AEAA@XZ)
-Core.obj : error LNK2019: "private: __cdecl KeyManager::~KeyManager(void)" (??1KeyManager@@AEAA@XZ)"void __cdecl `public: static class GetInstance * __cdecl KeyManager::GetInstance(void)'::`2'::`dynamic atexit destructor for 'manager''(void)" (??__Fmanager@?1??GetInstance@KeyManager@@SAPEAV1@XZ@YAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-Player.obj : error LNK2001: 확인할 수 없는 외부 기호 "private: __cdecl KeyManager::~KeyManager(void)" (??1KeyManager@@AEAA@XZ)
-Core.obj : error LNK2019: "private: __cdecl PathManager::~PathManager(void)" (??1PathManager@@AEAA@XZ)"void __cdecl `public: static class GetInstance * __cdecl PathManager::GetInstance(void)'::`2'::`dynamic atexit destructor for 'manager''(void)" (??__Fmanager@?1??GetInstance@PathManager@@SAPEAV1@XZ@YAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-ResourceManager.obj : error LNK2001: 확인할 수 없는 외부 기호 "private: __cdecl PathManager::~PathManager(void)" (??1PathManager@@AEAA@XZ)
-Core.obj : error LNK2019: "private: __cdecl ColliderManager::ColliderManager(void)" (??0ColliderManager@@AEAA@XZ)"public: static class ColliderManager * __cdecl ColliderManager::GetInstance(void)" (?GetInstance@ColliderManager@@SAPEAV1@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-Core.obj : error LNK2019: "private: __cdecl ColliderManager::~ColliderManager(void)" (??1ColliderManager@@AEAA@XZ)"void __cdecl `public: static class GetInstance * __cdecl ColliderManager::GetInstance(void)'::`2'::`dynamic atexit destructor for 'manager''(void)" (??__Fmanager@?1??GetInstance@ColliderManager@@SAPEAV1@XZ@YAXXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-Missile.obj : error LNK2019: "private: __cdecl ResourceManager::ResourceManager(void)" (??0ResourceManager@@AEAA@XZ)"public: static class ResourceManager * __cdecl ResourceManager::GetInstance(void)" (?GetInstance@ResourceManager@@SAPEAV1@XZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-Monster.obj : error LNK2001: 확인할 수 없는 외부 기호 "private: __cdecl ResourceManager::ResourceManager(void)" (??0ResourceManager@@AEAA@XZ)
-Player.obj : error LNK2001: 확인할 수 없는 외부 기호 "private: __cdecl ResourceManager::ResourceManager(void)" (??0ResourceManager@@AEAA@XZ)
-StartScene.obj : error LNK2001: 확인할 수 없는 외부 기호 "private: __cdecl ResourceManager::ResourceManager(void)" (??0ResourceManager@@AEAA@XZ)
-C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\Output\bin_Debug\DGame.exe : fatal error LNK1120: 6개의 확인할 수 없는 외부 참조입니다.
+  WinAPI_Study.vcxproj -> C:\Users\stark\Desktop\CPP\WinAPI_2\WinAPI_Study\Output\bin_Debug\DGame.exe

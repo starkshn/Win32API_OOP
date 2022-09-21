@@ -38,6 +38,16 @@ unsigned int g_VK[static_cast<unsigned int>(KEY::LAST)] =
 	//LAST,
 };
 
+KeyManager::KeyManager()
+{
+
+}
+
+KeyManager::~KeyManager()
+{
+
+}
+
 void KeyManager::init()
 {
 	for (int i = 0; i < static_cast<unsigned int>(KEY::LAST); ++i)

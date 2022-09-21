@@ -5,6 +5,7 @@
 #include "SceneManager.h"
 #include "PathManager.h"
 #include "ColliderManager.h"
+#include "ResourceManager.h"
 
 Core::Core()
 	: 

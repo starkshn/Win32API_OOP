@@ -4,6 +4,7 @@
 #include "TimeManager.h"
 #include "ResourceManager.h"
 #include "Texture.h"
+#include "Collider.h"
 
 Monster::Monster()
 	:
