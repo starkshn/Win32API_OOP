@@ -21,6 +21,18 @@ void Scene::update()
 		}
 	}
 }
+
+void Scene::finalUpdate()
+{
+	for (UINT i = 0; i < static_cast<UINT>(OBJECT_TYPE::END); ++i)
+	{
+		for (size_t j = 0; j < _objects[i].size(); ++j)
+		{
+			_objects[i][j]->finalUpdate();
+		}
+	}
+}
+
 void Scene::render(HDC dc)
 {
 	for (UINT i = 0; i < static_cast<UINT>(OBJECT_TYPE::END); ++i)

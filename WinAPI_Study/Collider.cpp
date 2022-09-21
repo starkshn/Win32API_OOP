@@ -8,7 +8,7 @@ UINT Collider::s_id = 0;
 
 Collider::Collider()
 	:
-	_id(++s_id),
+	_id(s_id++),
 	p_owner(nullptr),
 	_collisionCount(0),
 	_offsetPos{0.f, 0.f},
@@ -20,7 +20,7 @@ Collider::Collider()
 
 Collider::Collider(const Collider& origin)
 	:
-	_id(++s_id),
+	_id(s_id++),
 	p_owner(nullptr),
 	_offsetPos(origin._offsetPos),
 	_colliderScale(origin._colliderScale)

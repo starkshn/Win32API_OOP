@@ -13,8 +13,8 @@
 Player::Player() : p_texture(nullptr)
 {
 	CreateCollider();
-	GetCollider()->SetOffsetPos(Vector2(0.f, 5.f));
-	GetCollider()->SetColliderSacle(Vector2(30.f, 30.f));
+	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
+	GetCollider()->SetColliderSacle(Vector2(40.f, 40.f));
 
 	p_texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerTexture", L"Textures\\Plane2.bmp");
 }
@@ -46,7 +46,7 @@ void Player::update()
 	}
 
 	// Missile
-	if (KEY_TAP(KEY::V))
+	if (KEY_TAP(KEY::SPACE))
 	{
 		CreateMissile();
 	}

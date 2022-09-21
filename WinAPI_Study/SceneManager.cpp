@@ -34,6 +34,7 @@ void SceneManager::init()
 void SceneManager::update()
 {
 	p_currentScene->update();
+	p_currentScene->finalUpdate();
 }
 
 void SceneManager::render(HDC sceneDC)

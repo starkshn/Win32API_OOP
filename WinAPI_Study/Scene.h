@@ -15,6 +15,7 @@ public:
 
 public:
 	virtual void update();
+	void finalUpdate();
 	virtual void render(HDC dc);
 	virtual void Enter() abstract;
 	virtual void Exit() abstract;
