@@ -15,8 +15,10 @@ Monster::Monster()
 	_missileFire(false),
 	_centerAnchor{0.f, 0.f}
 {
+	SetObjectName(L"Monster_1");
+
 	CreateCollider();
-	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
+	GetCollider()->SetOffsetPos(Vector2{ 0.f, 0.f });
 	GetCollider()->SetColliderSacle(Vector2{ 30.f, 30.f });
 
 	p_texture = ResourceManager::GetInstance()->LoadTexture(L"MonsterTexture", L"Textures\\monsterPlane.bmp");
@@ -63,6 +65,29 @@ void Monster::render(HDC dc)
 	);
 
 	Object::ComponentRender(dc);
+}
+
+void Monster::OnCollisionEnter(Collider* other)
+{
+	Object* otherPtr = other->GetColliderOwner();
+
+	if (otherPtr->GetObjectName() == L"Player")
+	{
+		_hp -= 1;
+
+		if (_hp <= 0)
+			DeleteObjectEvent(this);
+	}
+}
+
+void Monster::OnCollisionStay(Collider* other)
+{
+
+}
+
+void Monster::OnCollisionExit(Collider* other)
+{
+
 }
 
 void Monster::CreateMonsterMissile()

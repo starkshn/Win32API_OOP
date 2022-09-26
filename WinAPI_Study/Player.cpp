@@ -9,14 +9,31 @@
 #include "PathManager.h"
 #include "ResourceManager.h"
 #include "Collider.h"
+#include "Animator.h"
+#include "Animation.h"
 
-Player::Player() : p_texture(nullptr)
+Player::Player()
 {
+	SetObjectName(L"Player");
+
 	CreateCollider();
-	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
+	GetCollider()->SetOffsetPos(Vector2{ 0.f, 0.f });
 	GetCollider()->SetColliderSacle(Vector2{ 40.f, 40.f });
 
-	p_texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerTexture", L"Textures\\MS_Player.bmp");
+	// 세로 : 56px, 가로 : 56px
+	// WALK_LEFT는 인덱스가 9까지 존재
+	Texture* texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerAnimationTexture", L"Textures\\MetalSlug_Player.bmp");
+
+	CreateAnimator();
+	GetAnimator()->CreateAnimation(L"WALK_RIGHT", texture, Vector2(0, 56), Vector2(56, 56), Vector2(56, 0), 0.1f, 9);
+	GetAnimator()->PlayAnimation(L"WALK_RIGHT", true);
+
+	Animation* anim = GetAnimator()->FindAnimation(L"WALK_RIGHT");
+
+	for (int i = 0; i < anim->GetMaxFrame(); ++i)
+	{
+		anim->GetAnimFrame(i)._offset = Vector2(0.f, 0.f);
+	}
 }
 
 Player::~Player()
@@ -49,6 +66,18 @@ void Player::update()
 	if (KEY_TAP(KEY::SPACE))
 	{
 		CreateMissile();
+
+		Texture* texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerAnimationTexture", L"Textures\\MetalSlug_Player.bmp");
+
+		GetAnimator()->CreateAnimation(L"Attack", texture, Vector2(0, 112), Vector2(56, 56), Vector2(56, 0), 0.1f, 4);
+		GetAnimator()->PlayAnimation(L"Attack", true);
+
+		Animation* anim = GetAnimator()->FindAnimation(L"Attack");
+
+		for (int i = 0; i < anim->GetMaxFrame(); ++i)
+		{
+			anim->GetAnimFrame(i)._offset = Vector2(0.f, 0.f);
+		}
 	}
 	if (KEY_TAP(KEY::B))
 	{
@@ -56,11 +85,13 @@ void Player::update()
 	}
 
 	SetPos(pos);
+
+	GetAnimator()->update();
 }
 
 void Player::render(HDC dc)
 {
-	int width = static_cast<int>(p_texture->GetWidth());
+	/*int width = static_cast<int>(p_texture->GetWidth());
 	int height = static_cast<int>(p_texture->GetHeight());
 
 	Vector2 pos = GetPos();
@@ -74,7 +105,7 @@ void Player::render(HDC dc)
 		p_texture->GetDC(),
 		0, 0, width, height,
 		RGB(0, 255, 0)
-	);
+	);*/
 
 	Object::ComponentRender(dc);
 }

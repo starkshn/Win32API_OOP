@@ -16,7 +16,10 @@ EventManager::~EventManager()
 
 void EventManager::update()
 {
+	// ==========================================
 	// 이전 프레임에서 등록해둔 Dead Object 삭제한다.
+	// ==========================================
+
 	for (size_t i = 0; i < _vecDead.size(); ++i)
 	{
 		delete _vecDead[i];
@@ -31,21 +34,21 @@ void EventManager::update()
 	_vecEvents.clear();
 }
 
-void EventManager::ExcuteEvent(const EVENT& e)
+void EventManager::ExcuteEvent(const EVENT& event)
 {
-	switch (e._eventType)
+	switch (event._eventType)
 	{
 		case EVENT_TYPE::CREATE_OBJECT:
 		{
-			Object* newObjPtr = (Object*)e._objectPtr;
-			OBJECT_TYPE newObjectType = (OBJECT_TYPE)e._objectType;
+			Object* newObjPtr = (Object*)event._objectPtr;
+			OBJECT_TYPE newObjectType = (OBJECT_TYPE)event._objectType;
 
 			SceneManager::GetInstance()->GetCurrentScene()->AddObject(newObjPtr, newObjectType);
 		}
 			break;
 		case EVENT_TYPE::DELETE_OBJECT:
 		{
-			Object* deadObjPtr = (Object*)e._objectPtr;
+			Object* deadObjPtr = (Object*)event._objectPtr;
 
 			if (!deadObjPtr->IsDead())
 			{

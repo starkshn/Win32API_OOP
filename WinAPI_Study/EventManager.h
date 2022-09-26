@@ -18,15 +18,13 @@ private:
 	vector<Object*> _vecDead;
 
 private:
-	void ExcuteEvent(const EVENT& e);
+	void ExcuteEvent(const EVENT& event);
 
 public:
 	void update();
 
 public:
-	void AddEvent(const EVENT& e) { _vecEvents.push_back(e); }
-
-
+	void AddEvent(const EVENT& event) { _vecEvents.push_back(event); }
 
 };
 

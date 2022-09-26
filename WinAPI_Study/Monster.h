@@ -15,6 +15,8 @@ private:
 	bool			_missileFire;
 	UINT			_monsterId = 0;
 
+	int				_hp = 5;
+
 	Vector2			_centerAnchor;
 	Texture*		p_texture = nullptr;
 	MonsterMissile* p_missile = nullptr;
@@ -26,6 +28,11 @@ public:
 public:
 	virtual void update() override;
 	virtual void render(HDC dc) override;
+
+public:
+	virtual void OnCollisionEnter(Collider* other) override;
+	virtual void OnCollisionStay(Collider* other) override;
+	virtual void OnCollisionExit(Collider* other) override;
 
 public:
 	void CreateMonsterMissile();

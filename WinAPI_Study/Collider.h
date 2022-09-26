@@ -6,12 +6,12 @@ class Collider
 {
 private:
 	static UINT		s_id;
+	UINT			_id = 0;
+
+	UINT			_collisionCount = 0;
 
 	Object*			p_owner;
 
-	UINT			_id = 0;
-	UINT			_collisionCount = 0;
-	
 	Vector2			_offsetPos;
 	Vector2			_finalPos;
 	Vector2			_colliderScale;

@@ -17,3 +17,5 @@ using std::make_pair;
 
 // image
 #pragma comment(lib, "Msimg32.lib")
+
+#include "Func.h"

@@ -149,6 +149,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Animator.h" />
     <ClInclude Include="ColliderManager.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Core.h" />
@@ -181,6 +183,8 @@
     <ClInclude Include="WinAPI_Study.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Animator.cpp" />
     <ClCompile Include="ColliderManager.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Core.cpp" />

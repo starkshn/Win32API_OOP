@@ -95,6 +95,9 @@
     <Filter Include="Engine\03_Managers\EventManager">
       <UniqueIdentifier>{8ba4efc3-81a9-492f-b82c-05d626332aea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\07_Component\Animator\Animation">
+      <UniqueIdentifier>{ff183bf3-faa5-456c-b394-2e805e25cdc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -185,6 +188,12 @@
     <ClInclude Include="EventManager.h">
       <Filter>Engine\03_Managers\EventManager</Filter>
     </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Engine\07_Component\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Engine\07_Component\Animator\Animation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_Study.rc">
@@ -269,6 +278,12 @@
     </ClCompile>
     <ClCompile Include="EventManager.cpp">
       <Filter>Engine\03_Managers\EventManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Engine\07_Component\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Engine\07_Component\Animator\Animation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@
 #include "PathManager.h"
 #include "ColliderManager.h"
 #include "ResourceManager.h"
+#include "EventManager.h"
 
 Core::Core()
 	: 
@@ -97,6 +98,7 @@ void Core::progress()
 	// ===============
 	// Event 지연처리
 	// ===============
+	EventManager::GetInstance()->update();
 }
 
 void Core::CreateHBRUSH()
