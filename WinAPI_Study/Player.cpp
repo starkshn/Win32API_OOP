@@ -14,7 +14,7 @@ Player::Player() : p_texture(nullptr)
 {
 	CreateCollider();
 	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
-	GetCollider()->SetColliderSacle(Vector2(40.f, 40.f));
+	GetCollider()->SetColliderSacle(Vector2{ 40.f, 40.f });
 
 	p_texture = ResourceManager::GetInstance()->LoadTexture(L"PlayerTexture", L"Textures\\MS_Player.bmp");
 }

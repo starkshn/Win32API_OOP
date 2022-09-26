@@ -8,7 +8,14 @@ Scene::Scene()
 }
 Scene::~Scene()
 {
-	
+	for (unsigned int i = 0; i < static_cast<unsigned int>(OBJECT_TYPE::END); ++i)
+	{
+		for (size_t j = 0; j < _objects[i].size(); ++j)
+		{
+			if (nullptr != _objects[i][j])
+				delete _objects[i][j];
+		}
+	}
 }
 
 void Scene::update()
@@ -17,7 +24,10 @@ void Scene::update()
 	{
 		for (size_t j = 0; j < _objects[i].size(); ++j)
 		{
-			_objects[i][j]->update();
+			if (!_objects[i][j]->IsDead())
+			{
+				_objects[i][j]->update();
+			}
 		}
 	}
 }
@@ -37,9 +47,19 @@ void Scene::render(HDC dc)
 {
 	for (UINT i = 0; i < static_cast<UINT>(OBJECT_TYPE::END); ++i)
 	{
-		for (size_t j = 0; j < _objects[i].size(); ++j)
+		vector<Object*>::iterator iter = _objects[i].begin();
+
+		for (iter = _objects[i].begin(); iter != _objects[i].end(); )
 		{
-			_objects[i][j]->render(dc);
+			if (!(*iter)->IsDead())
+			{
+				(*iter)->render(dc);
+				++iter;
+			}
+			else
+			{
+				iter = _objects[i].erase(iter);
+			}
 		}
 	}
 }

@@ -32,7 +32,8 @@ Object::Object(const Object& origin)
 
 Object::~Object()
 {
-	
+	if (nullptr != p_collider)
+		delete p_collider;
 }
 
 void Object::finalUpdate()
@@ -43,18 +44,11 @@ void Object::finalUpdate()
 	}
 }
 
-void Object::ComponentRender(HDC dc)
-{
-	if (p_collider != nullptr)
-	{
-		p_collider->render(dc);
-	}
-}
-
 void Object::render(HDC dc)
 {
 	Rectangle
-	(	dc,
+	(	
+		dc,
 		static_cast<int>(_pos._x - _scale._x / 2.f),
 		static_cast<int>(_pos._y - _scale._y / 2.f),
 		static_cast<int>(_pos._x + _scale._x / 2.f),
@@ -62,6 +56,12 @@ void Object::render(HDC dc)
 	);
 
 	ComponentRender(dc);
+}
+
+void Object::ComponentRender(HDC dc)
+{
+	if (p_collider != nullptr)
+		p_collider->render(dc);
 }
 
 void Object::CreateCollider()

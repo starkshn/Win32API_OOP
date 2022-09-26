@@ -17,7 +17,7 @@ Monster::Monster()
 {
 	CreateCollider();
 	GetCollider()->SetOffsetPos(Vector2(0.f, 0.f));
-	GetCollider()->SetColliderSacle(Vector2(30.f, 30.f));
+	GetCollider()->SetColliderSacle(Vector2{ 30.f, 30.f });
 
 	p_texture = ResourceManager::GetInstance()->LoadTexture(L"MonsterTexture", L"Textures\\monsterPlane.bmp");
 }
@@ -63,7 +63,6 @@ void Monster::render(HDC dc)
 	);
 
 	Object::ComponentRender(dc);
-
 }
 
 void Monster::CreateMonsterMissile()

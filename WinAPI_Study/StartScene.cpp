@@ -24,8 +24,8 @@ void StartScene::Enter()
 {
 	// Player
 	Object* player = new Player();
-	player->SetPos(Vector2{640.f, 383.f});
-	player->SetScale(Vector2{100.f, 100.f});
+	player->SetPos(Vector2{640.f, 384.f});
+	player->SetScale(Vector2{70.f, 70.f});
 
 	AddObject(player, OBJECT_TYPE::PLAYER);
 
@@ -43,7 +43,7 @@ void StartScene::Enter()
 	{
 		monster = new Monster();
 		monster->SetPos(Vector2( (moveDis + monsterScale / 2.f) + static_cast<float>(i) * term , 50.f));
-		monster->SetScale(Vector2(41.f, 41.f));
+		monster->SetScale(Vector2(40.f, 40.f));
 		monster->SetLoopDistance(moveDis);
 		monster->SetCenterAnchor(monster->GetPos());
 		AddObject(monster, OBJECT_TYPE::MONSTER);

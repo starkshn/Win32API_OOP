@@ -20,7 +20,7 @@ void ColliderManager::update()
 {
 	for (UINT row = 0; row < static_cast<UINT>(OBJECT_TYPE::END); ++row)
 	{
-		for (UINT col = 0; col < static_cast<UINT>(OBJECT_TYPE::END); ++col)
+		for (UINT col = row; col < static_cast<UINT>(OBJECT_TYPE::END); ++col)
 		{
 			if (_arrCheckCollision[row] & (1 << col))
 			{
@@ -99,7 +99,6 @@ void ColliderManager::CollisionObjectUpdate(OBJECT_TYPE left, OBJECT_TYPE right)
 			else
 			{
 				// 현재 충돌중이지 않다.
-
 				if (iter->second)
 				{
 					leftCollider->OnCollisionExit(rightCollider);
@@ -107,7 +106,6 @@ void ColliderManager::CollisionObjectUpdate(OBJECT_TYPE left, OBJECT_TYPE right)
 					iter->second = false;
 				}
 			}
-
 		}
 	}
 }

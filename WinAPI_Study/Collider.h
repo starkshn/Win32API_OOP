@@ -5,16 +5,16 @@ class Object;
 class Collider
 {
 private:
-	static UINT s_id;
-	UINT _id = 0;
+	static UINT		s_id;
 
-	UINT _collisionCount;
+	Object*			p_owner;
+
+	UINT			_id = 0;
+	UINT			_collisionCount = 0;
 	
-	Object* p_owner;
-
-	Vector2 _offsetPos;
-	Vector2 _finalPos;
-	Vector2 _colliderScale;
+	Vector2			_offsetPos;
+	Vector2			_finalPos;
+	Vector2			_colliderScale;
 
 public:
 	Collider();
@@ -38,7 +38,7 @@ public:
 	Vector2 GetOffsetPos() { return _offsetPos; }
 	Vector2 GetColliderScale() { return _colliderScale; }
 	Vector2 GetFinalPos() { return _finalPos; }
-	UINT GetID() { return _id; }
+	UINT	GetID() { return _id; }
 	Object* GetColliderOwner() { return p_owner; }
 
 public:

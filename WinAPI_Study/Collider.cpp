@@ -10,10 +10,7 @@ Collider::Collider()
 	:
 	_id(s_id++),
 	p_owner(nullptr),
-	_collisionCount(0),
-	_offsetPos{0.f, 0.f},
-	_finalPos{ 0.f, 0.f },
-	_colliderScale{ 0.f, 0.f }
+	_collisionCount(0)
 {
 
 }
@@ -51,17 +48,16 @@ void Collider::render(HDC dc)
 	}
 
 	SelectGDI b(dc, HBRUSH_TYPE::HOLLOW);
-	SelectGDI p(dc, HPEN_TYPE::GREEN);
+	SelectGDI p(dc, pen);
 
 	Rectangle
 	(
 		dc,
-		static_cast<int>(_finalPos._x - _colliderScale._x / 2.f),
-		static_cast<int>(_finalPos._y - _colliderScale._y / 2.f),
-		static_cast<int>(_finalPos._x + _colliderScale._x / 2.f),
-		static_cast<int>(_finalPos._y + _colliderScale._y / 2.f)
+		static_cast<int>(_finalPos._x - (_colliderScale._x / 2.f)),
+		static_cast<int>(_finalPos._y - (_colliderScale._y / 2.f)),
+		static_cast<int>(_finalPos._x + (_colliderScale._x / 2.f)),
+		static_cast<int>(_finalPos._y + (_colliderScale._y / 2.f))
 	);
-	
 }
 
 void Collider::OnCollisionEnter(Collider* other)
@@ -74,7 +70,6 @@ void Collider::OnCollisionEnter(Collider* other)
 void Collider::OnCollisionStay(Collider* other)
 {
 	p_owner->OnCollisionStay(other);
-
 }
 
 

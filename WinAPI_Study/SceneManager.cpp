@@ -25,8 +25,6 @@ void SceneManager::init()
 	p_scenes[static_cast<UINT>(SCENE_TYPE::START)] = new StartScene;
 	p_scenes[static_cast<UINT>(SCENE_TYPE::START)]->SetName(L"StartScene");
 
-
-
 	p_currentScene = p_scenes[static_cast<UINT>(SCENE_TYPE::START)];
 	p_currentScene->Enter();
 }
